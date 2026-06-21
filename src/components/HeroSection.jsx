@@ -47,11 +47,11 @@ return (
    </div>
                 {/* Projects preview */}
                 <p className='text-[#A3A2A4]'>click on the picture to view project</p>
-                <div className='grid grid-cols-1 md:grid-cols-3 lg:gird-cols-3 gap-6 min-w-full'>
+                <div className='grid grid-cols-2 md:grid-cols-3 lg:gird-cols-3 gap-6  md:min-w-full'>
                 {projGradient.map((gradient, i) => (
               <div
                 key={i}
-            className='rounded-xl p-px'
+            className='rounded-xl p-px '
                 style={{
                   background: `linear-gradient(135deg, ${gradient.from}, ${gradient.to})`,
                 }}
