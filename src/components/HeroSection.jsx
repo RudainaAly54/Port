@@ -23,11 +23,11 @@ return (
             <Settings  className="text-[#be68de]" size={48} />
         </div>
         
-        <h1 className = "text-[#DDDDDF] text-3xl md:text-6xl font-bold leading-tight md:leading-[4rem]">
+        <h1 className = "text-[#DDDDDF] text-2xl md:text-4xl lg:text-6xl font-bold leading-tight md:leading-[4rem]">
             Hi there! I'm <span className= "ml-10 flex items-center bg-gradient-to-r from-[#b76bd1] to-[#813d9a] text-transparent bg-clip-text"><ChevronLeft color= '#812c9e' size={60}/>Rudaina Aly<ChevronRight color= '#b45cd4' size={60}/></span>
             Front-end developer
         </h1>
-        <p className = "text-[#A3A2A4] text-md md:text-xl font-semibold leading-relaxed md:leading-[2.5rem]">
+        <p className = "text-[#A3A2A4] text-sm md:text-base lg:text-xl font-semibold leading-relaxed md:leading-[2.5rem]">
             I build modern React interfaces with clean architecture, smooth interactions, and thoughtful user experiences.
             </p>
 {/* CTA buttons */}
@@ -41,7 +41,7 @@ return (
                 </Link>
                 <a 
                 href='https://drive.google.com/file/d/1UsHCtJrg8YYcApd_cO1mnlw_dvALQ7bC/view?usp=sharing'
-                className='text-[white] p-5  text-bolder underline text-2xl hover:-translate-y-5 hover:text-[#A352BF] transition transiton-all duration-300'>
+                className='text-[white] p-5 underline text-lg md:text-2xl hover:-translate-y-5 hover:text-[#A352BF] transition transiton-all duration-300'>
                View CV   
                 </a>
    </div>

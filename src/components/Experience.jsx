@@ -15,8 +15,8 @@ const Experience = () => {
         className = "backdrop-blur-xl rounded-3xl p-12 md:p-20 max-w-6xl w-full shadow-2xl bg-[rgba(15,10,30,0.75)] border-[rgba(147,51,234,0.25)] border-[1px] flex flex-col md:flex-col items-start  gap-3 md:gap-10"
         >
             <div >
-                <h2 className="text-6xl text-[#DDDDDF] font-semibold">Experience</h2>
-             <p className="text-gray-400 text-lg mb-5  leading-10">
+                <h2 className="text-3xl md:text-5xl lg:text-6xl text-[#DDDDDF] font-semibold">Experience</h2>
+             <p className="text-gray-400 text-sm md:text-lg mb-5 leading-8 md:leading-10">
                 My professional journey in the world of web development
               </p>
             </div>
@@ -37,7 +37,7 @@ const Experience = () => {
                   <div className="flex flex-col md:flex-row justify-between  gap-2">
                       <div className="flex items-center gap-3 mb-1">
                     
-                        <h3 className="text-white text-xl md:text-3xl font-medium">
+                        <h3 className="text-white text-lg md:text-2xl lg:text-3xl font-medium">
                         {exp.role}
                     </h3>
                 
@@ -47,8 +47,8 @@ const Experience = () => {
                         <p>{exp.period}</p>
                     </div>
                   </div>
-                      <p className="text-base font-medium ml-9 bg-gradient-to-br from-[#a855f7] to-[#ec4899] text-transparent bg-clip-text">{exp.title}</p>
-                  <p className="text-[#DDDDDF]">{exp.description}</p>
+                      <p className="text-sm md:text-base font-medium ml-9 bg-gradient-to-br from-[#a855f7] to-[#ec4899] text-transparent bg-clip-text">{exp.title}</p>
+                  <p className="text-[#DDDDDF] text-sm md:text-base">{exp.description}</p>
                   
                     {exp.highlights.map((highligh, i) => (
                     <ul>
@@ -60,7 +60,7 @@ const Experience = () => {
                     </ul>
                     ))}
 
-                    <h4 className="text-xl text-white font-bold">Certificates</h4>
+                    <h4 className="text-base md:text-xl text-white font-bold">Certificates</h4>
                       <ul
                         className="list-none flex  gap-2"
                         >

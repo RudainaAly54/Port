@@ -41,8 +41,8 @@ const Projects = () => {
             className="backdrop-blur-xl rounded-3xl p-12 md:p-20 max-w-6xl w-full shadow-2xl bg-[rgba(15,10,30,0.75)] border-[rgba(147,51,234,0.25)] border-[1px] flex flex-col items-start gap-5 md:gap-10"
         >
             <div className="w-full">
-                <h2 className="text-6xl text-[#DDDDDF] font-semibold">Featured Projects</h2>
-                <p className="text-gray-400 text-lg mb-10 leading-10">
+                <h2 className="text-3xl md:text-5xl lg:text-6xl text-[#DDDDDF] font-semibold">Featured Projects</h2>
+                <p className="text-gray-400 text-sm md:text-lg mb-10 leading-8 md:leading-10">
                     Some of my recent work that I'm proud of
                 </p>
 
@@ -62,8 +62,8 @@ const Projects = () => {
 
                         {/* Project Info */}
                         <div className='flex flex-col gap-5 w-full md:w-[50%]'>
-                            <h3 className='text-[#DDDDDF] text-xl md:text-4xl font-mono font-bold'>{proj.name}</h3>
-                            <p className='text-[#A3A2A4]'>{proj.abstract}</p>
+                            <h3 className='text-[#DDDDDF] text-lg md:text-2xl lg:text-4xl font-mono font-bold'>{proj.name}</h3>
+                            <p className='text-[#A3A2A4] text-sm md:text-base'>{proj.abstract}</p>
                             <div className='flex flex-wrap gap-3'>
                                 {proj.tech.map((tech, i) => (
                                     <span
@@ -75,7 +75,7 @@ const Projects = () => {
                             </div>
 
                             <button
-                                className='cursor-pointer text-[#d8b4fe] self-start underline underline-offset-2 hover:text-white transition-colors'
+                                className='cursor-pointer text-[#d8b4fe] text-sm md:text-base self-start underline underline-offset-2 hover:text-white transition-colors'
                                 onClick={() => setClicked(proj.id)}
                             >
                                 Grab a drink and dive into the detail  &#8594;
@@ -139,7 +139,7 @@ const Projects = () => {
                             </button>
 
                             {/* Project name */}
-                            <h3 className='text-white text-xl md:text-4xl font-mono font-bold tracking-wide'>
+                            <h3 className='text-white text-xl md:text-3xl lg:text-4xl font-mono font-bold tracking-wide'>
                                 {clickedProject.name}
                             </h3>
 

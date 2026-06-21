@@ -64,8 +64,8 @@ const Contacts = () => {
                 {/* Left panel: form */}
                 <div className="flex flex-col gap-6 w-full">
                     <div>
-                        <h2 className="text-5xl md:text-6xl text-[#DDDDDF] font-semibold mb-3">Let's Work Together</h2>
-                        <p className="text-gray-400 text-lg leading-8">
+                        <h2 className="text-2xl md:text-4xl lg:text-6xl text-[#DDDDDF] font-semibold mb-3">Let's Work Together</h2>
+                        <p className="text-gray-400 text-sm md:text-lg leading-7 md:leading-8">
                             Have a project in mind? Drop me a message and let's create something amazing!
                         </p>
                     </div>
