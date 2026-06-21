@@ -1,0 +1,45 @@
+[
+  {
+    "id": "proj_1",
+    "name": "BinWise",
+    "abstract": "A full-stack recycling platform that helps users scan waste items, identify materials using Computer Vision (YOLOv8), estimate weight, and earn reward points. Users can redeem rewards through scheduled pickups or in-center drop-offs. Built as a MERN + Python microservice system.",
+    "details": "BinWise is an AI-powered recycling platform developed to address a common challenge: many people want to recycle but often lack information about recyclable materials, nearby recycling options, and incentives to participate. Our team chose this project because environmental sustainability is a growing concern, and technology can play a key role in making recycling more accessible and engaging.The platform allows users to scan waste items using computer vision, identify recyclable materials, estimate item weight, and receive reward points for responsible disposal. Users can schedule pickups or locate nearby recycling centers through an interactive map, creating a complete and convenient recycling experience.Built with React, Node.js, MongoDB, Python, FastAPI, and YOLOv8, BinWise combines web development, artificial intelligence, and geolocation technologies to solve a real-world problem. Through this project, I gained hands-on experience building scalable full-stack applications, integrating AI models into web systems, and designing user-centered solutions that encourage sustainable behavior and environmental awareness.",
+    "tech": ["React", "React Leaflet", "JavaScript", "Tailwind CSS"],
+    "imgSrc": "src/assets/BinWise.png",
+    "github": "https://github.com/RudainaAly54/BinWise/tree/main",
+    "live": "https://bin-wise-recycle.vercel.app/"
+  },
+
+  {
+    "id": "proj_2",
+    "name": "Network Intrusion Detection System",
+    "abstract": "A full-stack Machine Learning application that detects network intrusions. A user fills in network connection details on a web page, clicks 'Analyze', and the SVM model predicts whether the connection is Normal or an Attack.",
+    "details": "The Network Intrusion Detection System was developed to address the growing challenge of identifying malicious network activity before it causes security breaches. The project aims to help organizations detect suspicious connections and potential cyberattacks through machine learning-driven analysis. Built with a React frontend, FastAPI backend, and an SVM model trained on the KDD dataset, the system analyzes network traffic and classifies connections as normal or malicious. The project involved data preprocessing, exploratory data analysis, PCA for dimensionality reduction, and model optimization using GridSearchCV. Through this project, I gained practical experience in machine learning workflows, cybersecurity concepts, API integration, and presenting complex predictions through an intuitive web interface.",
+    "tech": ["React", "JavaScript", "TailwindCSS"],
+    "imgSrc": "src/assets/dashboard.png",
+    "github": "https://github.com/RudainaAly54/NetworkIntrusionDetectionSystem",
+    "live": null
+  },
+
+  {
+    "id": "proj_3",
+    "name": "Mafioso",
+    "abstract": "A real-time social deduction party game played entirely in Egyptian Arabic. One shared device (phone or tablet) passes between players — each secretly views their assigned role, then the group debates, accuses, and votes to eject the hidden criminal (المافيوسو) before they outnumber the innocents.",
+    "details": "Mafioso was created to bring the classic Mafia social deduction game into a digital format tailored for Arabic-speaking players. The goal was to simplify game management, eliminate the need for a moderator, and create a more immersive experience while preserving the strategic and social aspects of the original game. Built with React and Context API, the application handles role distribution, voting, player progression, and complete game flow management. Features such as animated role reveals, interactive storytelling, audio effects, and timed gameplay enhance player engagement. This project strengthened my skills in state management, complex game logic, user experience design, and building interactive applications with React.",
+    "tech": ["React", "Framer Motion", "Tailwind CSS", "Context API"],
+    "imgSrc": "src/assets/Mafioso.png",
+    "github": "https://github.com/RudainaAly54/Mafioso",
+    "live": "https://mafiosoo.netlify.app/"
+  },
+
+  {
+    "id": "proj_4",
+    "name": "Trivia",
+    "abstract": "A responsive quiz platform that delivers an engaging knowledge-testing experience through dynamic questions and instant feedback.",
+    "details": "Trivia was developed to create an engaging and accessible way for users to test their knowledge through interactive quizzes. The project focuses on delivering a smooth user experience with responsive design, dynamic questions, and instant feedback to keep players engaged throughout the game. Built with React and Tailwind CSS, the application emphasizes component reusability, efficient state management, and clean interface design. Through this project, I strengthened my understanding of React fundamentals, user interaction patterns, responsive development, and creating enjoyable educational experiences.",
+    "tech": ["React", "Tailwind CSS", "JavaScript"],
+    "imgSrc": "src/assets/trivia.png",
+    "github": "https://github.com/RudainaAly54/Trivia",
+    "live": "https://trivia-challengee.netlify.app/"
+  }
+]
