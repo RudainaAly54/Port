@@ -13,11 +13,12 @@ const Nav = () => {
     ]
 
     return (
-        <nav className=" fixed top-3 left-1/2 -translate-x-1/2 flex justify-between items-center mt-0 mb-0 p-3 pl-5 pr-5 border-2 border-[#42374f] pb-3 rounded-3xl top-0 z-50 min-w-[50%] max-md:min-w-[80%] max-sm:min-w-[50%] bg-[rgba(15,10,30,0.1)] backdrop-blur-xl shadow-2xl">
-            <h3 className="text-2xl font-bold text-[#DDDDDF] max-sm:self-start">
-                Rud
-                <span className="text-sm text-[#A352BF]">.dev </span>
-            </h3>
+        <nav className=" fixed top-3 left-1/2 -translate-x-1/2 flex justify-between items-center  py-3 px-5 border-2 border-[#42374f]  rounded-3xl  z-50 min-w-[50%] max-md:min-w-[80%] max-sm:min-w-[50%] bg-[rgba(15,10,30,0.1)] backdrop-blur-xl shadow-2xl">
+        
+
+            <div className='w-12 h-12'>
+                <img src="src/assets/MyLogo.png" alt="Rud Logo" className='w-full h-full '/>
+            </div>
 
             <Menu
                 className="text-[#A3A2A4] md:hidden lg:hidden cursor-pointer"
@@ -43,7 +44,7 @@ const Nav = () => {
                         <Link to={link.link} smooth={true} duration={500}>{link.link}</Link>
                     </li>
                 ))}
-                <Link  to='contact' smooth={true} duration= {500} 
+                <Link  to='Contact' smooth={true} duration= {500} 
                 className="bg-gradient-to-r to-[#A352BF] from-[#67287c] text-white px-4 py-2 rounded-xl hover:scale-105 active:scale-90 transition-transform duration-300 cursor-pointer">
                    Contact
                 </Link>

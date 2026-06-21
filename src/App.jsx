@@ -6,13 +6,14 @@ import AboutMe from './components/AboutMe'
 import Skills from './components/Skills'
 import Experience from './components/Experience'
 import Projects from './components/Projects'
+import Contacts from './components/Contacts'
 
 function App() {
 
 
   return (
 <>
-<main className= " w-[100%] min-h-screen pt-24 flex flex-col items-center justify-start gap-32 relative overflow-hidden"
+<main className= " w-[100%] min-h-screen pt-24 flex flex-col items-center justify-start gap-32 relative overflow-hidden pb-10"
 style={{
     background: `radial-gradient(ellipse at 50% 80%, #3b0764 0%, #1a0030 40%, #09090f 70%)`
   }}
@@ -23,7 +24,7 @@ style={{
   <Skills/>
   <Experience/>
   <Projects/>
-
+  <Contacts/>
 </main>
 
 

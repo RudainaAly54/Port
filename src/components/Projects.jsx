@@ -1,5 +1,6 @@
 import projects from '../Data/projects.json'
 import { useState } from 'react'
+import { createPortal } from 'react-dom'
 import { motion, AnimatePresence } from 'motion/react'
 import { X, ExternalLink } from 'lucide-react'
 import { FaGithub } from "react-icons/fa";
@@ -34,87 +35,6 @@ const Projects = () => {
                     Some of my recent work that I'm proud of
                 </p>
 
-                      {/*More details card*/}
-        <AnimatePresence>
-            {clicked && clickedProject && (
-                <>
-                    {/* Backdrop */}
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        className="absolute inset-0 bg-black/70 backdrop-blur-md z-40"
-                        onClick={() => setClicked(null)}
-                    />
-
-                    {/* Card */}
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9, y: 40 }}
-                        animate={{ opacity: 1, scale: 1, y: 0 }}
-                        exit={{ opacity: 0, scale: 0.9, y: 40 }}
-                        transition={{ duration: 0.3 }}
-                        className="absolute top-1/2 translate-x-1 z-50 w-[90%] max-w-2xl max-h-[85vh] overflow-y-auto bg-[rgba(10,6,25,0.97)] border border-[rgba(147,51,234,0.35)] rounded-2xl shadow-2xl shadow-purple-900/40 p-10 flex flex-col gap-6"
-                    >
-                        {/* Close button */}
-                        <button
-                            className="absolute top-5 right-5 text-gray-500 hover:text-white transition-colors cursor-pointer"
-                            onClick={() => setClicked(null)}
-                        >
-                            <X size={24} />
-                        </button>
-
-                        {/* Project name */}
-                        <h3 className='text-white text-4xl font-mono font-bold tracking-wide'>
-                            {clickedProject.name}
-                        </h3>
-
-                        {/* Divider */}
-                        <div className="h-px bg-[rgba(147,51,234,0.3)] w-full" />
-
-                        {/* Abstract */}
-                        <p className='text-gray-300 text-base leading-7'>{clickedProject.abstract}</p>
-
-                        {/* Details */}
-                        <p className='text-gray-400 text-sm leading-8'>{clickedProject.details}</p>
-
-                        {/* Tech tags */}
-                        <div className='flex flex-wrap gap-3'>
-                            {clickedProject.tech.map((tech, i) => (
-                                <span
-                                    key={i}
-                                    className='bg-[rgba(147,51,234,0.15)] text-xs text-[#d8b4fe] px-3 py-1 rounded-full border border-[rgba(147,51,234,0.3)]'>
-                                    {tech}
-                                </span>
-                            ))}
-                        </div>
-
-                        {/* Divider */}
-                        <div className="h-px bg-[rgba(147,51,234,0.3)] w-full" />
-
-                        {/* Action buttons */}
-                        <div className="flex gap-4">
-                            <a
-                                href={clickedProject.live}
-                                className="flex-1 flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-white transition-opacity hover:opacity-90"
-                                style={gradientBtn}
-                            >
-                                <ExternalLink size={15} />
-                                View Live
-                            </a>
-                            <a
-                                href={clickedProject.github}
-                                className="flex-1 flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold transition-all hover:bg-purple-600/10"
-                                style={outlineBtn}
-                            >
-                                <FaGithub size={15} />
-                                Code
-                            </a>
-                        </div>
-                    </motion.div>
-                </>
-            )}
-        </AnimatePresence>
-        
                 {projects.map(proj => (
                     <motion.div
                         key={proj.id}
@@ -122,7 +42,7 @@ const Projects = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.75 }}
                         whileHover={{ y: -16, borderColor: "rgba(147,51,234,0.45)" }}
-                        className="bg-[rgba(6,4,18,0.6)] border-1 border-solid rounded-2xl border-[rgba(147,51,234,0.15)] p-5 flex flex-col gap-10 md:flex-row mb-5 h-[400px]"
+                        className="bg-[rgba(6,4,18,0.6)] border-1 border-solid rounded-2xl border-[rgba(147,51,234,0.15)] p-5 flex flex-col gap-10 md:flex-row mb-5"
                     >
                         {/* Project Picture */}
                         <div className='w-full md:w-[50%]'>
@@ -147,7 +67,7 @@ const Projects = () => {
                                 className='cursor-pointer text-[#d8b4fe] self-start underline underline-offset-2 hover:text-white transition-colors'
                                 onClick={() => setClicked(proj.id)}
                             >
-                                Read more &#8594;
+                                Grab a drink and dive into the detail  &#8594;
                             </button>
 
                             <div className="flex gap-3">
@@ -170,19 +90,96 @@ const Projects = () => {
                             </div>
                         </div>
                     </motion.div>
-
-
-
                 ))}
-                
-
-             
             </div>
-
-          
         </motion.section>
 
-       
+        {/*More details card — rendered via portal into document.body so it
+            escapes any transformed ancestor (Framer Motion sections all carry
+            a `transform` style, which would otherwise turn `position: fixed`
+            into something relative to that section instead of the viewport) */}
+        {createPortal(
+            <AnimatePresence>
+                {clicked && clickedProject && (
+                    <>
+                        {/* Backdrop */}
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="fixed inset-0 bg-black/70 backdrop-blur-md z-40"
+                            onClick={() => setClicked(null)}
+                        />
+
+                        {/* Card */}
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9, y: 40 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.9, y: 40 }}
+                            transition={{ duration: 0.3 }}
+                            className="fixed  top-10 left-5 md:left-[35%] lg:left-[25%]  z-50 w-[90%] max-w-2xl max-h-[85vh] overflow-y-auto bg-[rgba(10,6,25,0.97)] border border-[rgba(147,51,234,0.35)] rounded-2xl shadow-2xl shadow-purple-900/40 p-10 flex flex-col gap-6"
+                        >
+                            {/* Close button */}
+                            <button
+                                className="absolute top-5 right-5 text-gray-500 hover:text-white transition-colors cursor-pointer"
+                                onClick={() => setClicked(null)}
+                            >
+                                <X size={24} />
+                            </button>
+
+                            {/* Project name */}
+                            <h3 className='text-white text-4xl font-mono font-bold tracking-wide'>
+                                {clickedProject.name}
+                            </h3>
+
+                            {/* Divider */}
+                            <div className="h-px bg-[rgba(147,51,234,0.3)] w-full" />
+
+                            {/* Abstract */}
+                            <p className='text-gray-300 text-base leading-7'>{clickedProject.abstract}</p>
+
+                            {/* Details */}
+                            <p className='text-gray-400 text-sm leading-8'>{clickedProject.details}</p>
+
+                            {/* Tech tags */}
+                            <div className='flex flex-wrap gap-3'>
+                                {clickedProject.tech.map((tech, i) => (
+                                    <span
+                                        key={i}
+                                        className='bg-[rgba(147,51,234,0.15)] text-xs text-[#d8b4fe] px-3 py-1 rounded-full border border-[rgba(147,51,234,0.3)]'>
+                                        {tech}
+                                    </span>
+                                ))}
+                            </div>
+
+                            {/* Divider */}
+                            <div className="h-px bg-[rgba(147,51,234,0.3)] w-full" />
+
+                            {/* Action buttons */}
+                            <div className="flex gap-4">
+                                <a
+                                    href={clickedProject.live}
+                                    className="flex-1 flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                                    style={gradientBtn}
+                                >
+                                    <ExternalLink size={15} />
+                                    View Live
+                                </a>
+                                <a
+                                    href={clickedProject.github}
+                                    className="flex-1 flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold transition-all hover:bg-purple-600/10"
+                                    style={outlineBtn}
+                                >
+                                    <FaGithub size={15} />
+                                    Code
+                                </a>
+                            </div>
+                        </motion.div>
+                    </>
+                )}
+            </AnimatePresence>,
+            document.body
+        )}
         </>
     )
 }
