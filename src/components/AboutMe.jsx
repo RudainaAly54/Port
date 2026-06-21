@@ -20,8 +20,28 @@ const AboutMe = () => {
           transition={0.7}
           className="text-[#DDDDDF] text-sm md:text-base lg:text-lg"
         >
-          I'm a front-end developer who turns ideas into clean, responsive React interfaces, and I care about more than just writing code — I care about how things feel, how they work, and how they hold up when real users interact with them. I joined Digital Egypt Pioneers Initiative (DEPI), I worked on real-world challenges that pushed me to think beyond implementation and start thinking like someone building actual products, not just features.
+          I'm a front-end developer who turns ideas into clean, responsive React interfaces, and I care about more than just writing code — I care about how things feel, how they work, and how they hold up when real users interact with them.
         </motion.p>
+
+ <motion.p
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={0.7}
+          className="text-[#DDDDDF] text-sm md:text-base lg:text-lg"
+        >
+          If you work with me, you get someone who pays attention to both UX and clean, maintainable code — the kind that makes products feel reliable, not fragile or rushed. And honestly, I don't believe in staying in one place for too long; I'm always building, learning, and pushing myself to improve with every project I touch.
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={0.7}
+          className="text-[#DDDDDF] text-sm md:text-base lg:text-lg"
+        >
+           I joined Digital Egypt Pioneers Initiative (DEPI), I worked on real-world challenges that pushed me to think beyond implementation and start thinking like someone building actual products, not just features.
+        </motion.p>
+
+
 
         <motion.p
           initial={{ opacity: 0, x: -50 }}
@@ -36,14 +56,7 @@ const AboutMe = () => {
           , which really showed me how much impact good communication, teamwork, and problem-solving can have when everything clicks together. I learned that strong products aren't built alone — they're shaped through collaboration and constant iteration.
         </motion.p>
 
-        <motion.p
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={0.7}
-          className="text-[#DDDDDF] text-sm md:text-base lg:text-lg"
-        >
-          If you work with me, you get someone who pays attention to both UX and clean, maintainable code — the kind that makes products feel reliable, not fragile or rushed. And honestly, I don't believe in staying in one place for too long; I'm always building, learning, and pushing myself to improve with every project I touch.
-        </motion.p>
+       
       </div>
 
       {/* Right Panel Coding picture */}
