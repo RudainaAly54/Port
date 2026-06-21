@@ -33,7 +33,7 @@ return (
 {/* CTA buttons */}
             <div className='flex flex-col gap-5 md:flex-row lg:flex-row'>
                 <Link 
-                to='projects'
+                to='Projects'
                 smooth = {true}
                 duration={500}
                 className='bg-gradient-to-r from-[#A352BF] via-[#be68de] to-[#7c498d] p-5 rounded-2xl  shadow-purple-700 shadow-md text-[#DDDDDF] font-bold hover:-translate-y-5 transition-all duration-300 cursor-pointer'>
