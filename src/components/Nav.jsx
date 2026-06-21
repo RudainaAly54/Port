@@ -14,7 +14,7 @@ const Nav = () => {
     ]
 
     return (
-        <nav className=" fixed top-3 left-1/2 -translate-x-1/2 flex justify-between items-center  py-3 px-5 border-2 border-[#42374f]  rounded-3xl  z-50 min-w-[50%] max-md:min-w-[80%] max-sm:min-w-[100%] bg-[rgba(15,10,30,0.1)] backdrop-blur-xl shadow-2xl">
+        <nav className=" fixed top-3 left-1/2 -translate-x-1/2 flex justify-between items-center  py-3 px-5 border-2 border-[#42374f]  rounded-3xl  z-50 min-w-[50%] max-md:min-w-[80%] max-sm:w-full bg-[rgba(15,10,30,0.1)] backdrop-blur-xl shadow-2xl">
         
 
             <div className='w-12 h-12'>
