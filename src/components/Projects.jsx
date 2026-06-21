@@ -139,7 +139,7 @@ const Projects = () => {
                             </button>
 
                             {/* Project name */}
-                            <h3 className='text-white text-4xl font-mono font-bold tracking-wide'>
+                            <h3 className='text-white text-xl md:text-4xl font-mono font-bold tracking-wide'>
                                 {clickedProject.name}
                             </h3>
 

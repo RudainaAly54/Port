@@ -37,7 +37,7 @@ const Experience = () => {
                   <div className="flex flex-col md:flex-row justify-between  gap-2">
                       <div className="flex items-center gap-3 mb-1">
                     
-                        <h3 className="text-white text-3xl font-medium">
+                        <h3 className="text-white text-xl md:text-3xl font-medium">
                         {exp.role}
                     </h3>
                 
