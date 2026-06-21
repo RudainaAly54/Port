@@ -62,7 +62,7 @@ const Projects = () => {
 
                         {/* Project Info */}
                         <div className='flex flex-col gap-5 w-full md:w-[50%]'>
-                            <h3 className='text-[#DDDDDF] text-4xl font-mono font-bold'>{proj.name}</h3>
+                            <h3 className='text-[#DDDDDF] text-xl md:text-4xl font-mono font-bold'>{proj.name}</h3>
                             <p className='text-[#A3A2A4]'>{proj.abstract}</p>
                             <div className='flex flex-wrap gap-3'>
                                 {proj.tech.map((tech, i) => (
