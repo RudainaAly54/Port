@@ -12,7 +12,7 @@ const AboutMe = () => {
     >
       {/* Left panel About me */}
       <div className="flex flex-col gap-2 w-[50%] max-sm:w-[100%] max-md:w-[100%]">
-        <h2 className="text-3xl md:text-5xl lg:text-6xl text-[#DDDDDF] font-semibold mb-5">About Me</h2>
+        <h2 className="text-2xl md:text-5xl lg:text-6xl text-[#DDDDDF] font-semibold mb-5">About Me</h2>
 
         <motion.p
           initial={{ opacity: 0, x: -50 }}

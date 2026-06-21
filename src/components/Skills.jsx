@@ -18,7 +18,7 @@ transition = {{duration:0.7}}
 className="backdrop-blur-xl rounded-3xl p-12 md:p-20 max-w-6xl w-full shadow-2xl bg-[rgba(15,10,30,0.75)] border-[rgba(147,51,234,0.25)] border-[1px] flex flex-col md:flex-col items-start  gap-5 md:gap-10"
 >
  <div>
-       <h2 className="text-3xl md:text-5xl lg:text-6xl text-[#DDDDDF] font-semibold ">Skills & Technologies</h2>
+       <h2 className="text-2xl md:text-5xl lg:text-6xl text-[#DDDDDF] font-semibold ">Skills & Technologies</h2>
 <p className="text-gray-400 text-sm md:text-lg mb-10 leading-8 md:leading-10">
                 A collection of tools and technologies I use to bring ideas to life
               </p>
