@@ -128,7 +128,7 @@ const Projects = () => {
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.9, y: 40 }}
                             transition={{ duration: 0.3 }}
-                            className="fixed  top-10 left-8 md:left-[10%]  lg:left-[20%] xl:left-[25%]  z-50  max-w-2xl max-h-[85vh] overflow-y-auto bg-[rgba(10,6,25,0.97)] border border-[rgba(147,51,234,0.35)] rounded-2xl shadow-2xl shadow-purple-900/40 p-10 flex flex-col gap-6"
+                            className="fixed  top-32 left-0  md:left-20  lg:left-80  z-50  max-w-2xl max-h-[85vh] overflow-y-auto bg-[rgba(10,6,25,0.97)] border border-[rgba(147,51,234,0.35)] rounded-2xl shadow-2xl shadow-purple-900/40 p-10 flex flex-col gap-6"
                         >
                             {/* Close button */}
                             <button

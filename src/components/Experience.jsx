@@ -34,9 +34,9 @@ const Experience = () => {
   }}
             className="bg-[rgba(6,4,18,0.6)] border-1 border-solid rounded-2xl border-[rgba(147,51,234,0.15)] p-5 flex flex-col gap-3 hover:translate-y-2"
                 >
-                  <div className="flex justify-between  gap-2">
+                  <div className="flex flex-col md:flex-row justify-between  gap-2">
                       <div className="flex items-center gap-3 mb-1">
-                         <Briefcase className="text-purple-400" size={48} />
+                    
                         <h3 className="text-white text-3xl font-medium">
                         {exp.role}
                     </h3>
