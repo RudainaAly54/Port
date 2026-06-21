@@ -1,12 +1,15 @@
 import { Settings, Code, ChevronRight, ChevronLeft, ArrowDown  } from 'lucide-react';
 import {motion} from 'framer-motion';
 import {Link} from 'react-scroll'
+import triviaImg from '../assets/trivia.png'
+import dashboardImg from '../assets/dashboard.png'
+import binwiseImg from '../assets/BinWise.png'
 
 const HeroSection = () => {
 
-    const projGradient = [{ from: "#7c3aed", to: "#db2777", img:"src/assets/trivia.png"},
-              { from: "#3b82f6", to: "#7c3aed", img: "src/assets/dashboard.png" },
-              { from: "#7c3aed", to: "#5b21b6", img: "src/assets/logo.png" },]
+    const projGradient = [{ from: "#7c3aed", to: "#db2777", img: triviaImg},
+              { from: "#3b82f6", to: "#7c3aed", img: dashboardImg },
+              { from: "#7c3aed", to: "#5b21b6", img: binwiseImg },]
 return (
     <motion.header
     id="Home"

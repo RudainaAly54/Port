@@ -1,6 +1,7 @@
 import { Menu } from 'lucide-react'
 import { Link } from 'react-scroll'
 import { useState } from 'react'
+import MyLogo from '../assets/MyLogo.png'
 
 const Nav = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,7 +18,7 @@ const Nav = () => {
         
 
             <div className='w-12 h-12'>
-                <img src="src/assets/MyLogo.png" alt="Rud Logo" className='w-full h-full '/>
+                <img src={MyLogo} alt="Rud Logo" className='w-full h-full '/>
             </div>
 
             <Menu

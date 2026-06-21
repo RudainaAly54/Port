@@ -4,6 +4,17 @@ import { createPortal } from 'react-dom'
 import { motion, AnimatePresence } from 'motion/react'
 import { X, ExternalLink } from 'lucide-react'
 import { FaGithub } from "react-icons/fa";
+import BinWise from '../assets/BinWise.png'
+import dashboard from '../assets/dashboard.png'
+import Mafioso from '../assets/Mafioso.png'
+import trivia from '../assets/trivia.png'
+
+const imageMap = {
+    'src/assets/BinWise.png': BinWise,
+    'src/assets/dashboard.png': dashboard,
+    'src/assets/Mafioso.png': Mafioso,
+    'src/assets/trivia.png': trivia,
+}
 
 const Projects = () => {
     const [clicked, setClicked] = useState(null)
@@ -46,7 +57,7 @@ const Projects = () => {
                     >
                         {/* Project Picture */}
                         <div className='w-full md:w-[50%]'>
-                            <img src={proj.imgSrc} alt="project picture" className='w-full h-full rounded-xl' />
+                            <img src={imageMap[proj.imgSrc] ?? proj.imgSrc} alt="project picture" className='w-full h-full rounded-xl' />
                         </div>
 
                         {/* Project Info */}

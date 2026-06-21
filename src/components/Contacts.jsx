@@ -199,9 +199,9 @@ const Contacts = () => {
                         <span className="text-orange-300">"What's the challenge?"</span>{"\n"}
                         {"    "}<span className="text-green-300">required</span>
                         {"  "}<span className="text-pink-400">{"/>"}</span>{"\n\n"}
-                        {"  "}<span className="text-pink-400">{"<button"}</span>{"\n"}
+                        {"  "}<span className="text-pink-400">{"<button"}</span>
                         
-                        {"  "}<span className="text-pink-400">{">"}</span>{"\n"}
+                        <span className="text-pink-400">{">"}</span>{"\n"}
                         {"    "}<span className="text-blue-300">Submit &amp; Start Building!</span>{"\n"}
                         {"  "}<span className="text-pink-400">{"</button>"}</span>{"\n"}
                         <span className="text-pink-400">{"</form>"}</span>
