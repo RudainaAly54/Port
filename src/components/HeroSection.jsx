@@ -40,7 +40,7 @@ return (
                    See Projects →
                 </Link>
                 <a 
-                href='https://drive.google.com/file/d/1UsHCtJrg8YYcApd_cO1mnlw_dvALQ7bC/view?usp=sharing'
+                href='https://docs.google.com/document/d/1wAWiFh_yiGkPYvh3GVpTYaE3qbLqNn0M/edit?usp=sharing&ouid=113760562214749424633&rtpof=true&sd=true'
                 className='text-[white] p-5 underline text-lg md:text-2xl hover:-translate-y-5 hover:text-[#A352BF] transition transiton-all duration-300'>
                View CV   
                 </a>
